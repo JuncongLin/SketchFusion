@@ -1,0 +1,984 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\GeometryStudio.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GeometryStudio.ico"
+IDR_GeometryStudioTYPE  ICON                    "res\\GeometryStudioDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_WORKSPACE           BITMAP                  "res\\workspace.bmp"
+IDB_TOOLBAR256          BITMAP                  "res\\Toolbar256.bmp"
+IDB_TOOLBARCOLD256      BITMAP                  "res\\ToolbarCold256.bmp"
+IDB_START16             BITMAP                  "res\\start16.bmp"
+IDB_START               BITMAP                  "res\\start.bmp"
+IDB_TOOLS_PAGE          BITMAP                  "res\\tools_page.bmp"
+IDR_MANIPULATE          BITMAP                  "res\\toolbar1.bmp"
+IDB_MANIPULATE256       BITMAP                  "res\\ManipulateCold256.bmp"
+IDB_MANIPULATECOLD256   BITMAP                  "res\\ManipulateHot256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MANIPULATE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_ZOOM_ZOOMMOVE
+    BUTTON      ID_ZOOM_ZOOMIN
+    BUTTON      ID_ZOOM_ZOOMOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "Standard",                    ID_VIEW_STANDARD
+            MENUITEM "Manipulate",                  ID_TOOLBARS_MANIPULATE
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Office &2000",                ID_VIEW_APPLOOK_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS2005
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+        END
+        MENUITEM "Output",                      ID_VIEW_OUTPUT
+        MENUITEM "WorkSpace",                   ID_VIEW_WORKSPACE
+        MENUITEM "Video",                       ID_VIEW_VIDEO
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GeometryStudio...",    ID_APP_ABOUT
+    END
+END
+
+IDR_GeometryStudioTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        POPUP "Import"
+        BEGIN
+            MENUITEM "Obj File",                    ID_IMPORT_OBJFILE
+            MENUITEM "TM File",                     ID_IMPORT_TMFILE
+            MENUITEM "OFF File",                    ID_IMPORT_OFFFILE
+        END
+        POPUP "Export"
+        BEGIN
+            MENUITEM "Obj File...",                 ID_EXPORT_OBJFILE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "Standard",                    ID_VIEW_STANDARD
+            MENUITEM "Manipulate",                  ID_VIEW_MANIPULATE
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Office &2000",                ID_VIEW_APPLOOK_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS2005
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+        END
+        MENUITEM "ToolBox",                     ID_VIEW_TOOLBOX
+        MENUITEM "Output",                      ID_VIEW_OUTPUT
+        MENUITEM "WorkSpace",                   ID_VIEW_WORKSPACE
+        MENUITEM "Video",                       ID_VIEW_VIDEO
+        MENUITEM "POV Ray",                     ID_VIEW_POVRAY
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "Tool"
+    BEGIN
+        MENUITEM "Rotate",                      ID_TOOL_ROTATE
+        MENUITEM "Translate",                   ID_TOOL_TRANSLATE
+        POPUP "Zoom"
+        BEGIN
+            MENUITEM "Zoom In",                     ID_ZOOM_ZOOMIN
+            MENUITEM "Zoom Out",                    ID_ZOOM_ZOOMOUT
+            MENUITEM "Zoom Move",                   ID_ZOOM_ZOOMMOVE
+        END
+        MENUITEM "Lock",                        ID_TOOL_LOCK
+        MENUITEM SEPARATOR
+        POPUP "Select"
+        BEGIN
+            MENUITEM "Edge",                        ID_SELECT_EDGE
+            MENUITEM "Object",                      ID_SELECT_OBJECT
+            MENUITEM "Clear",                       ID_SELECT_CLEAR
+            MENUITEM "Vertex",                      ID_SELECT_VERTEX
+            POPUP "Patch"
+            BEGIN
+                MENUITEM "Rectangle",                   ID_SELECT_RECTPATCH
+                MENUITEM "Polygon",                     ID_SELECT_POLYPATCH
+                MENUITEM "Bounded",                     ID_PATCH_BOUNDED
+            END
+            MENUITEM "Face",                        ID_SELECT_FACE
+            MENUITEM "Boundary",                    ID_SELECT_BOUNDARY
+            MENUITEM "Stroke",                      ID_SELECT_STROKE
+        END
+        POPUP "Stroke"
+        BEGIN
+            MENUITEM "Cut",                         ID_STROKE_CUT
+            MENUITEM SEPARATOR
+            MENUITEM "Select",                      ID_STROKE_SELECT
+            MENUITEM "Preserve",                    ID_STROKE_PRESERVE
+            MENUITEM SEPARATOR
+            MENUITEM "Silhouette",                  ID_STROKE_SILHOUETTE
+            MENUITEM SEPARATOR
+            MENUITEM "Seed",                        ID_STROKE_SEED
+            MENUITEM SEPARATOR
+            MENUITEM "Structure",                   ID_STROKE_STRUCTURE
+        END
+        POPUP "TPrimitive"
+        BEGIN
+            MENUITEM "Lock",                        ID_TPRIMITIVE_LOCK
+            POPUP "Locate"
+            BEGIN
+                MENUITEM "Default",                     ID_LOCATE_DEFAULT
+                MENUITEM "Auto",                        ID_LOCATE_AUTO
+                MENUITEM "Manual",                      ID_LOCATE_MANUAL
+                MENUITEM "Angle...",                    ID_LOCATE_ANGLE
+            END
+            POPUP "Type"
+            BEGIN
+                MENUITEM "Sphere",                      ID_TYPE_SPHERE
+                MENUITEM "Cylinder",                    ID_TYPE_CYLINDER
+            END
+            MENUITEM "Property...",                 ID_TPRIMITIVE_PROPERTY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Play",                        ID_TOOL_PLAY
+        MENUITEM "Stop",                        ID_TOOL_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Test",                        ID_TOOL_TEST
+        MENUITEM SEPARATOR
+        POPUP "Remove"
+        BEGIN
+            MENUITEM "Face",                        ID_REMOVE_FACE
+            MENUITEM "Stroke",                      ID_REMOVE_STROKE
+        END
+        POPUP "Add"
+        BEGIN
+            MENUITEM "Face",                        ID_ADD_FACE
+        END
+        POPUP "Silhouette"
+        BEGIN
+            MENUITEM "Draw",                        ID_SILHOUETTE_DRAW
+            POPUP "Type"
+            BEGIN
+                MENUITEM "Full-Connect",                ID_STYPE_FULL
+                MENUITEM "Partial-Connect",             ID_STYPE_PARTIAL
+                MENUITEM "Isolate",                     ID_STYPE_ISOLATE
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Animate",                     ID_TOOL_ANIMATE
+    END
+    POPUP "Render"
+    BEGIN
+        MENUITEM "RayTracer",                   ID_RENDER_RAYTRACER
+        MENUITEM "Radiosity",                   ID_RENDER_RADIOSITY
+        MENUITEM SEPARATOR
+        POPUP "Object"
+        BEGIN
+            MENUITEM "Composed",                    ID_OBJECT_COMPOSED
+            MENUITEM "Solid",                       ID_OBJECT_SOLID
+            MENUITEM "Line",                        ID_OBJECT_LINE
+            MENUITEM "Point",                       ID_OBJECT_POINT
+            MENUITEM "Silhouette",                  ID_OBJECT_SILHOUETTE
+            MENUITEM "Metric",                      ID_OBJECT_METRIC
+        END
+    END
+    POPUP "(Re)Meshing"
+    BEGIN
+        POPUP "Particle System"
+        BEGIN
+            MENUITEM "Sampling",                    ID_PS_SAMPLING
+            MENUITEM "Triangulation",               ID_PS_TRIANGULATION
+        END
+        POPUP "Marching Cube"
+        BEGIN
+            MENUITEM "Lewiner",                     ID_MC_LEWINER
+        END
+        MENUITEM "Advancing Front",             ID_ADVANCINGFRONT
+        MENUITEM "Area Equalize",               ID_AREAEQUALIZE
+        POPUP "Wrinkle"
+        BEGIN
+            MENUITEM "Minimum Bending",             ID_WRINKLE_BENDING
+            MENUITEM "Maximum Regularity",          ID_WRINKLE_MAXIMUMREGULARITY
+
+        END
+    END
+    POPUP "Reconstruction"
+    BEGIN
+        MENUITEM "RBF",                         ID_RECONSTRUCTION_RBF
+        MENUITEM "MPU",                         ID_RECONSTRUCTION_MPU
+        MENUITEM "MLS",                         ID_RECONSTRUCTION_MLS
+    END
+    POPUP "Filtering"
+    BEGIN
+        MENUITEM "Beltrami-Laplacian",          ID_FILTERING_BELTRAMI
+    END
+    POPUP "Fusion"
+    BEGIN
+        POPUP "Style"
+        BEGIN
+            MENUITEM "Functional Blending",         ID_FSTYLE_FB
+            MENUITEM "Radial Basis Function",       ID_FSTYLE_RBF
+        END
+        MENUITEM SEPARATOR
+        POPUP "Visualization"
+        BEGIN
+            POPUP "Trimmed MC"
+            BEGIN
+                MENUITEM "Throughout",                  ID_FTMC_THROUGHOUT
+                MENUITEM SEPARATOR
+                MENUITEM "Marching",                    ID_FTMC_MARCHING
+                MENUITEM "Wrinkle",                     ID_FTMC_WRINKLE
+                MENUITEM "Remesh",                      ID_FTMC_REMESH
+            END
+            POPUP "Particle System"
+            BEGIN
+                MENUITEM "Sampling",                    ID_FPS_SAMPLING
+                MENUITEM "Reconstruct",                 ID_FPS_RECONSTRUCT
+            END
+        END
+        MENUITEM SEPARATOR
+        POPUP "Detail Recovery"
+        BEGIN
+            MENUITEM "Extraction Detail",           ID_DETAILRECOVERY_EXTRACTIONDETAIL
+
+            MENUITEM "Structure",                   ID_DETAILRECOVERY_STRUCTURE
+
+            MENUITEM "Non-Structure",               ID_DETAILRECOVERY_NONSTRUCTURE
+
+            MENUITEM "Reconstruct",                 ID_DETAILRECOVERY_RECONSTRUCT
+
+            POPUP "Coordinate"
+            BEGIN
+                MENUITEM "Raw",                         ID_COORDINATE_RAW
+                MENUITEM "Base",                        ID_COORDINATE_BASE
+                MENUITEM "Recon",                       ID_COORDINATE_RECON
+                MENUITEM SEPARATOR
+                MENUITEM "Import",                      ID_COORDINATE_IMPORT
+                MENUITEM "Export",                      ID_COORDINATE_EXPORT
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Register Component",          ID_FUSION_REGISTERCOMPONENT
+        POPUP "Silhouette"
+        BEGIN
+            MENUITEM "Draw",                        ID_SILHOUETTE_DRAW
+            MENUITEM "Adjust",                      ID_SILHOUETTE_ADJUST
+            MENUITEM "Smooth",                      ID_SILHOUETTE_SMOOTH
+        END
+    END
+    MENUITEM "Control",                     ID_CONTROL
+    POPUP "Scene"
+    BEGIN
+        POPUP "Operation Mode"
+        BEGIN
+            MENUITEM "Scissor",                     ID_OMODE_SCISSOR
+            MENUITEM "Fusion",                      ID_OMODE_FUSION
+        END
+        MENUITEM SEPARATOR
+        POPUP "Scene Mode"
+        BEGIN
+            MENUITEM "Part",                        ID_SMODE_PART
+            MENUITEM "Whole",                       ID_SMODE_WHOLE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Axis",                        ID_SCENE_AXIS
+        MENUITEM "Background",                  ID_SCENE_BACKGROUND
+        MENUITEM SEPARATOR
+        MENUITEM "TPrimitive",                  ID_SCENE_TPRIMITIVE
+        POPUP "Silhouette"
+        BEGIN
+            MENUITEM "Plane",                       ID_SILHOUETTE_SHOW_PLANE
+            MENUITEM "Stroke",                      ID_SILHOUETTE_SHOW_STROKE_
+
+        END
+        MENUITEM "Silhouette Plane",            ID_SCENE_SILHOUETTEPLANE
+        MENUITEM SEPARATOR
+        MENUITEM "Antialiase",                  ID_SCENE_ANTIALIASE
+        MENUITEM "Magnificence",                ID_SCENE_MAGNIFICENCE
+        MENUITEM SEPARATOR
+        POPUP "Configuration"
+        BEGIN
+            MENUITEM "Load...",                     ID_CONFIGURATION_LOAD
+            MENUITEM "Save...",                     ID_CONFIGURATION_SAVE
+        END
+    END
+    POPUP "Match"
+    BEGIN
+        MENUITEM "Local",                       ID_MATCH_LOCAL
+        MENUITEM "Global",                      ID_MATCH_GLOBAL
+        MENUITEM "Similarity",                  ID_MATCH_SIMILARITY
+        MENUITEM "Setting",                     ID_MATCH_SETTING
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GeometryStudio...",    ID_APP_ABOUT
+        MENUITEM "Geometry Studio on the Web",  ID_HELP_WEB
+        MENUITEM "Contact the Author",          ID_HELP_CONTACT
+    END
+    POPUP "Deform"
+    BEGIN
+        MENUITEM "Scale",                       ID_DEFORM_SCALE
+        MENUITEM "Copy",                        ID_DEFORM_COPY
+    END
+END
+
+IDR_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Standard Toolbar",            ID_VIEW_TOOLBAR
+        MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
+        MENUITEM "&Workspace 2",                ID_VIEW_WORKSPACE2
+        MENUITEM "&Output",                     ID_VIEW_OUTPUT
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR4
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR5
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR6
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR7
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR8
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR9
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR10
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_POPUP_MDITABS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+    END
+END
+
+IDR_POPUP_DROP_MDITABS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Cancel",                     ID_MDI_CANCEL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About GeometryStudio"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "GeometryStudio Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    PUSHBUTTON      "http://www.sworm.go.3322.org",IDC_COMPANY_URL,40,36,119,
+                    14
+END
+
+IDD_VIDEO DIALOGEX 0, 0, 407, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Video Encoder"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Play",IDC_PLAY,27,28,42,14
+    PUSHBUTTON      "Stop",IDC_STOP,80,28,42,14
+    CONTROL         "Tracking Cursor",IDC_TRACKING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,27,51,66,10
+    EDITTEXT        IDC_FILEPATH,206,63,146,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_PATH,356,62,23,15
+    EDITTEXT        IDC_FILENAME,295,43,83,14,ES_AUTOHSCROLL
+    CONTROL         "Video",IDC_VIDEO,"Button",BS_AUTORADIOBUTTON,212,28,33,
+                    10
+    CONTROL         "Image",IDC_IMAGE,"Button",BS_AUTORADIOBUTTON,267,28,36,
+                    10
+    GROUPBOX        "",IDC_STATIC,206,23,172,18
+    LTEXT           "File Name:",IDC_STATIC,208,46,34,8
+    GROUPBOX        "Output",IDC_STATIC,197,14,192,67
+    GROUPBOX        "",IDC_STATIC,21,21,161,26
+    EDITTEXT        IDC_FRAMERATE,104,63,62,14,ES_AUTOHSCROLL
+    LTEXT           "Frame Rate:",IDC_STATIC,27,67,41,8
+    CONTROL         "",IDC_ADJUSTFMRATE,"msctls_updown32",UDS_ARROWKEYS,169,
+                    62,11,14
+    GROUPBOX        "Control",IDC_STATIC,15,15,173,67
+    CONTROL         "Batch",IDC_BATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    329,29,34,10
+    PUSHBUTTON      "Statistics",IDC_STATISTICS,133,28,42,14
+END
+
+IDD_POV_SETTING DIALOGEX 0, 0, 201, 230
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "POV Output Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Export",IDC_EXPORT,74,209,50,14
+    COMBOBOX        IDC_PRIMITIVES,23,24,99,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Output",IDC_OUTPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,25,39,10
+    CONTROL         "Boundary",IDC_WBOUNDARY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,66,47,10
+    GROUPBOX        "Scene Object",IDC_STATIC,15,12,171,33
+    GROUPBOX        "Option",IDC_STATIC,15,51,172,81
+    CONTROL         "Boundary Direction",IDC_WBOUNDARYDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,98,77,10
+    CONTROL         "Body Direction",IDC_WBODYDIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,82,62,10
+    COMBOBOX        IDC_PIGMENT,133,63,48,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Pigment",IDC_STATIC,103,66,26,8
+    COMBOBOX        IDC_FINISH,134,81,48,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Finish",IDC_STATIC,104,84,19,8
+    COMBOBOX        IDC_INTERIOR,133,102,48,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Interior",IDC_STATIC,103,105,25,8
+    GROUPBOX        "Scene",IDC_STATIC,15,135,171,67
+    COMBOBOX        IDC_SCENE,25,146,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Object Direction",IDC_WOBJECTDIRECTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,114,67,10
+END
+
+IDD_TSPHERE DIALOGEX 0, 0, 186, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,27,82,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,82,50,14
+    EDITTEXT        IDC_X,30,22,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Z,118,22,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,74,22,31,14,ES_AUTOHSCROLL
+    GROUPBOX        "Center",IDC_STATIC,16,11,151,32
+    EDITTEXT        IDC_R,76,51,72,14,ES_AUTOHSCROLL
+    LTEXT           "Radius:",IDC_STATIC,31,54,25,8
+END
+
+IDD_TANGLE DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "TPrimitive Locator Angle"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,97,69,50,14
+    EDITTEXT        IDC_ANGLE,67,32,79,14,ES_AUTOHSCROLL
+    LTEXT           "Angle:",IDC_STATIC,37,35,22,8
+END
+
+IDD_PARADIAG DIALOGEX 0, 0, 326, 228
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,68,207,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,177,207,50,14
+    CONTROL         "",IDC_PARAMETERIZATION,"Static",SS_BLACKFRAME,16,15,293,
+                    177
+END
+
+IDD_TCYLINDER DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,33,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,69,50,14
+    EDITTEXT        IDC_HEIGHT,111,22,40,14,ES_AUTOHSCROLL
+    LTEXT           "Height:",IDC_STATIC,47,26,24,8
+    EDITTEXT        IDC_RADIUS,110,42,40,14,ES_AUTOHSCROLL
+    LTEXT           "Radius:",IDC_STATIC,46,46,25,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GeometryStudio.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "GeometryStudio.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 398
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_POV_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_TSPHERE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_TANGLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_PARADIAG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_TCYLINDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\GeometryStudio.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "GeometryStudio"
+    IDR_GeometryStudioTYPE  "\nGeometryStudio\nGeometryStudio\n\n\nGeometryStudio.Document\nGeometryStudio.Document"
+    IDC_PROGRESS            "progress control"
+    IDS_MANIPULATE_TOOLBAR  "Manipulate"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GeometryStudio"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR5   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR6   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR7   "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\GeometryStudio.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
